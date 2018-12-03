@@ -1,0 +1,188 @@
+1. List all the DOM objects names below.
+
+Document,Element,Attribute,Event and Style
+
+
+
+2. List all the BOM objects names below.
+
+Navigator,History,Window,Location and Screen
+
+
+
+3.1. Find out most commonly used functions(minimum 4) of "document" object and write their purpose with a code snippet which proves the purpose.
+
+   1.close()
+
+     Closes the output stream previously opened with document.open()
+
+     document.close()
+
+   2.createAttribute()
+
+     Creates an attribute node
+
+      document.createAttribute()
+
+   3.createEvent()
+
+     Creates a new event
+
+     document.createEvent()
+
+   4.createElement()
+
+     Creates an Element node
+
+     document.createElement()
+
+
+
+
+
+3.2. Find out most commonly used functions(minimum 4) of "window" object and write their purpose with a code snippet which proves the purpose.
+
+     1.alert()
+
+       Displays an alert box with a message and an OK button
+
+       window.alert();
+
+     2.blur()
+
+       Removes focus from the current window
+
+       myWindow.blur();
+
+     3.prompt()
+
+       Displays a dialog box that prompts the visitor for input
+
+       prompt();
+
+     4.stop()
+
+       Stops the window from loading
+
+       window.stop();
+
+4. Create an HTML page with a button on it, when the button is clicked, it should display an alert box with text "Hello World"
+	
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    		<title>Alert on Button click</title>
+	</head>
+	<body>
+    		<p1>Click this button</p1><br><br>
+    		<button onclick="alert1()">click button</button>
+	</body>
+	<script>
+    	function alert1(){
+        	window.alert("Hello World");
+    	}
+	</script>
+	</html>
+
+5. Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page.
+NOTE: The buttton might have gone after text appears.
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    		<title>onclick text alert message</title>
+	</head>
+	<body>
+    		<p>Alert message in onclick button</p>
+    		<p id="hello" style="display: none;">Hello world</p>
+    		<button type="button" onclick="alert1()" id="hello1">Click Me!</button>
+	</body>
+	<script>
+    	function alert1(){
+        	document.getElementById('hello').style.display='block';
+        	document.getElementById('hello1').style.display='none';
+    	}
+	</script>
+	</html>	
+
+6. Create an HTML page with a button on it, when the button is clicked, it should display the text "Hello World" on the page, just below the button.
+NOTE: This time the button should not go off, it is still visible and present on the page.
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    		<title>onclick text alert message</title>
+	</head>
+	<body>
+    		<p>Alert message in onclick button</p>
+    		<button type="button" onclick="alert1()">Click Me!</button>
+    		<p id="hello" style="display: none;">Hello world</p>
+	</body>
+	<script>
+    	function alert1(){
+        	document.getElementById('hello').style.display='block';
+    	}
+	</script>
+	</html>
+
+7. Create an HTML Page with a textbox and a button, write anything in the text box and click on the button, Onclick of the button it should display the text on the alert box that was entered in the textbox.
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    		<title>Display Input text value on alert</title>
+    		<script type="text/javascript">
+        	window.onload = function(){
+           		document.getElementById('sending').onclick = function(e){
+               		alert(document.getElementById("name").value);
+               		return false;
+           		}
+        	}
+    		</script>
+	</head>
+	<body>
+        	<input type="text" name="name" id="name" /><br><br>
+        	<input type="submit" name="send" id="sending" value="submit" />
+	</body>
+	</html>
+
+8. Create an HTML Page with a textbox and a button, write anything in the text box and click on the button, Onclick of the button it should display the text just below the textbox on the webpage that was entered in the textbox.
+
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+    		<meta charset="UTF-8">
+    		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    		<title>Display Input text value on alert</title>
+    		<script language="JavaScript">
+            	function showInput() {
+                	document.getElementById('display').innerHTML = 
+                            document.getElementById("user_input").value;
+            	}
+    		</script>
+	</head>
+	<body>
+        
+       		<form>
+        	<label><b>Enter a Message</b></label>
+            	<input type="text" name="message" id="user_input">
+          	</form>
+        
+          	<input type="submit" onclick="showInput();"><br/>
+          	<label>Your input: </label>
+          	<p><span id='display'></span></p>
+	</body>
+	</html>

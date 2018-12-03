@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>onclick text alert message</title>
+</head>
+<body>
+    <p>Alert message in onclick button</p>
+    <p id="hello" style="display: none;">Hello world</p>
+    <button type="button" onclick="alert1()" id="hello1">Click Me!</button>
+</body>
+<script>
+    function alert1(){
+        document.getElementById('hello').style.display='block';
+        document.getElementById('hello1').style.display='none';
+    }
+</script>
+</html>

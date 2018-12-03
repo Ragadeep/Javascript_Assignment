@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Input text value on alert</title>
+    <script language="JavaScript">
+            function showInput() {
+                document.getElementById('display').innerHTML = 
+                            document.getElementById("user_input").value;
+            }
+    </script>
+</head>
+<body>
+        
+          <form>
+            <label><b>Enter a Message</b></label>
+            <input type="text" name="message" id="user_input">
+          </form>
+        
+          <input type="submit" onclick="showInput();"><br/>
+          <label>Your input: </label>
+          <p><span id='display'></span></p>
+</body>
+</html>

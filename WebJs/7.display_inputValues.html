@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Display Input text value on alert</title>
+    <script type="text/javascript">
+        window.onload = function(){
+           document.getElementById('sending').onclick = function(e){
+               alert(document.getElementById("name").value);
+               return false;
+           }
+        }
+    </script>
+</head>
+<body>
+        <input type="text" name="name" id="name" /><br><br>
+        <input type="submit" name="send" id="sending" value="submit" />
+</body>
+</html>
