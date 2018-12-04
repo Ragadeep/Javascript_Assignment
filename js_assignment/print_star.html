@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>print stars</title>
+</head>
+<body>
+    <form>
+        <strong>Enter the number to print stars</strong><br><brx>
+        <input type="number" id="star1" name="star1"><br><br>
+        <input type="number" id="star2"><br><br>
+        <input type="number" id="star3"><br><br>
+        <input type="button" value="submit" onclick="pnt_stars()">
+        <p id="dis_star1"></p>
+        <p id="dis_star2"></p>
+        <p id="dis_star3"></p>
+    </form>
+</body>
+    <script>
+        function pnt_stars(){
+            s1 = document.getElementById("star1").value;
+            s2 = document.getElementById("star2").value;
+            s3 = document.getElementById("star3").value;
+            var text = "";
+            var i;
+            for(i=1; i<=s1; i++){
+                text += "*";
+            }
+            document.getElementById("dis_star1").innerHTML = text;
+            var text2 = "";
+            var j;
+            for(j=1; j<=s2; j++){
+                text2 += "*";
+                document.getElementById("dis_star2").innerHTML = text2;
+            }
+            var text3 = "";
+            var k;
+            for(k=1; k<=s3; k++){
+                text3 += "*";
+            }
+            document.getElementById("dis_star3").innerHTML = text3;
+        }
+    </script>
+</html>

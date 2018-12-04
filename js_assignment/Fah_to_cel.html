@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fahrenheit scale  to Celsius scale</title>
+</head>
+<body>
+    <form>
+        <p>Convert Fahrenheit to Celsius</p>
+        <label>Fahrenheit: </label>
+        <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" name="fah" required><br><br>
+        <label>Celsius: </label>
+        <span id="cel"></span><br><br>
+        <input type="button" value="Convert" onclick="temp()">
+    </form>
+</body>
+<script>
+    function temp(){
+        x = document.getElementById("inputFahrenheit").value;
+        document.getElementById("cel").innerHTML = (x-32)*5/9;
+    }
+</script>
+</html>
